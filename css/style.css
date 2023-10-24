@@ -393,7 +393,15 @@ footer .container{
         font-size: 2em;
     }
 
-    /* estilo footer */
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+}
+   /* estilo footer */
 
     footer .container{
         justify-content: flex-end;
@@ -512,7 +520,6 @@ footer a:hover{
   .socials-column h5{
     display: none;
   }
-
   
   @media (min-width: 850px) {
 
@@ -1123,4 +1130,55 @@ progress::-moz-progress-bar {
 .btn-wsp:hover{
   background: #20ba5a;
   color: #FFF;
+}
+
+/* formulario de registro responsive */
+
+@media (min-width: 1200px) {
+  .form-field {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  .form-field label {
+    width: 175px;
+  }
+  .form-field input {
+    flex: 1;
+    border-radius: 5px; 
+    background-color: #f2f2f2;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .form-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .form-field label {
+    width: 150px;
+  }
+  .form-field input {
+    flex: 1;
+    border-radius: 5px; 
+    background-color: #f2f2f2;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-field {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .form-field label {
+    width: 100%;
+  }
+  .form-field input {
+    width: 100%;
+    border-radius: 5px; 
+    background-color: #f2f2f2;
+  }
 }
