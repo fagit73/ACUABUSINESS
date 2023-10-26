@@ -96,7 +96,7 @@ let page = document.body.dataset.page;
 if (page === 'index') {
   cad = `
   <div class="container">
-  <p class="logo">Don Eugenio!</p>
+  <img src="./images/logo.jpg" alt="">
   <nav>
       <a href="#acuaponia">Quienes Somos</a>
       <a href="#nuestros-productos">Nuestros Productos</a>
@@ -110,7 +110,7 @@ if (page === 'index') {
 } else if (page === 'login') {
   cad = `
   <div class="container">
-  <p class="logo">Don Eugenio!</p>
+  <img src="../../images/logo.jpg" alt="">
   <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
@@ -121,7 +121,7 @@ if (page === 'index') {
 } else if (page === 'forgotPassword') {
   cad = `
   <div class="container">
-  <p class="logo">Don Eugenio!</p>
+  <img src="../../images/logo.jpg" alt="">
   <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
@@ -133,7 +133,7 @@ if (page === 'index') {
 } else if (page === 'create') {
   cad = `
   <div class="container">
-  <p class="logo">Don Eugenio!</p>
+  <img src="../../images/logo.jpg" alt="">
     <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
@@ -144,7 +144,7 @@ if (page === 'index') {
 } else if (page === 'shoppingCart') {
   cad = `
   <div class="container">
-  <p class="logo">Don Eugenio!</p>
+  <img src="../../images/logo.jpg" alt="">
   <nav>
       <a href="../index.html">Pagina principal</a>
       <a href="../index.html#nuestros-productos">Nuestros Productos</a>
@@ -179,9 +179,9 @@ cad=`
                 progress.
               </h5>
               <div class="socials">
-                <a  href="www.facebook.com" class="fa-brands fa-facebook"></a>
-                <a href="www.instagram.com" class="fa-brands fa-instagram"></a>
-                <a href="www.linkedin.com" class="fa-brands fa-linkedin"></a>
+                <a  href="http://www.facebook.com" class="fa-brands fa-facebook"></a>
+                <a href="http://www.instagram.com" class="fa-brands fa-instagram"></a>
+                <a href="http://www.linkedin.com" class="fa-brands fa-linkedin"></a>
               </div>
             </div>
           </div>
