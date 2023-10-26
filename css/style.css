@@ -603,6 +603,20 @@ footer a:hover{
 
 /* cambio de estilo de las tarjetas del home nuestros productos para animacion */
 
+/* .productos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) { 
+  .productos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+} */
+
     .carta {
       position: relative;
       width: 300px;

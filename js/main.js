@@ -16,13 +16,87 @@
 
 //nav
 
-let cad;
-let url = window.location.pathname;
+// esta funcion se fija en que pagina estamos y cambia el nav de acuerdo a eso
+// no funciona en netlify porque no muestra el nombre del archivo en la url
 
-if (url.endsWith('/index.html')) { // Si estamos en index.html (url === '/index.html')
+
+// let cad;
+// let url = window.location.pathname;
+
+// if (url.endsWith('/index.html')) { // Si estamos en index.html (url === '/index.html')
+//   cad = `
+//   <div class="container">
+//   <p class="logo">Don Eugenio!</p>
+//   <nav>
+//       <a href="#acuaponia">Quienes Somos</a>
+//       <a href="#nuestros-productos">Nuestros Productos</a>
+//       <a href="./shoppingCart/shoppingCart.html">Pedidos</a>
+//       <a href="#footer">Contacto</a>
+//       <a href="./customer/account/login.html">Ingresar</a>
+//       <a href="./customer/account/create.html">Registrarse</a>
+//   </nav>
+//   </div>
+//   `
+// } else if (url.endsWith('/login.html')) { // Si estamos en login.html (url === '/login.html')
+//   cad = `
+//   <div class="container">
+//   <p class="logo">Don Eugenio!</p>
+//   <nav>
+//       <a href="../../index.html">Pagina principal</a>
+//       <a href="../../index.html#footer">Contacto</a>
+//       <a href="../account/create.html">Registrarse</a>
+//   </nav>
+//   </div>
+//   `
+// } else if (url.endsWith('/forgotPassword.html')) { // Si estamos en forgotPassword.html (url === '/forgotPassword.html')
+//   cad = `
+//   <div class="container">
+//   <p class="logo">Don Eugenio!</p>
+//   <nav>
+//       <a href="../../index.html">Pagina principal</a>
+//       <a href="../../index.html#footer">Contacto</a>
+//       <a href="../../customer/account/login.html">Ingresar</a>
+//       <a href="../../customer/account/create.html">Registrarse</a>
+//   </nav>
+//   </div>
+//   `
+// }else if (url.endsWith('/create.html')) { // Si estamos en create.html (url === '/create.html')
+//   cad = `
+//   <div class="container">
+//   <p class="logo">Don Eugenio!</p>
+//     <nav>
+//       <a href="../../index.html">Pagina principal</a>
+//       <a href="../../index.html#footer">Contacto</a>
+//       <a href="../../customer/account/login.html">Ingresar</a>
+//     </nav>
+//   </div>
+//   `
+// } else if (url.endsWith('/shoppingCart.html')) { // Si estamos en shopping_cart.html (url === '/shopping_cart.html')
+//   cad = `
+//   <div class="container">
+//   <p class="logo">Don Eugenio!</p>
+//   <nav>
+//       <a href="../index.html">Pagina principal</a>
+//       <a href="../index.html#nuestros-productos">Nuestros Productos</a>
+//       <a href="../index.html#footer">Contacto</a>
+//       <a href="../customer/account/login.html">Ingresar</a>
+//       <a href="../customer/account/create.html">Registrarse</a>
+//   </nav>
+//   </div>
+//   `
+// }
+
+// document.querySelector("header").innerHTML=cad
+
+// para solucionar el problema de la direccion url de netlify que no muestra el nombre del archivo y rompe la funcion anterior
+
+let cad;
+let page = document.body.dataset.page;
+
+if (page === 'index') {
   cad = `
   <div class="container">
-  <img src="./images/logo.jpg" alt="">
+  <p class="logo">Don Eugenio!</p>
   <nav>
       <a href="#acuaponia">Quienes Somos</a>
       <a href="#nuestros-productos">Nuestros Productos</a>
@@ -32,22 +106,22 @@ if (url.endsWith('/index.html')) { // Si estamos en index.html (url === '/index.
       <a href="./customer/account/create.html">Registrarse</a>
   </nav>
   </div>
-  `
-} else if (url.endsWith('/login.html')) { // Si estamos en login.html (url === '/login.html')
+  `;
+} else if (page === 'login') {
   cad = `
   <div class="container">
-  <img src="../../images/logo.jpg" alt="">
+  <p class="logo">Don Eugenio!</p>
   <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
       <a href="../account/create.html">Registrarse</a>
   </nav>
   </div>
-  `
-} else if (url.endsWith('/forgotPassword.html')) { // Si estamos en forgotPassword.html (url === '/forgotPassword.html')
+  `;
+} else if (page === 'forgotPassword') {
   cad = `
   <div class="container">
-  <img src="../images/logo.jpg" alt="">
+  <p class="logo">Don Eugenio!</p>
   <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
@@ -55,22 +129,22 @@ if (url.endsWith('/index.html')) { // Si estamos en index.html (url === '/index.
       <a href="../../customer/account/create.html">Registrarse</a>
   </nav>
   </div>
-  `
-}else if (url.endsWith('/create.html')) { // Si estamos en create.html (url === '/create.html')
+  `;
+} else if (page === 'create') {
   cad = `
   <div class="container">
-  <img src="../../images/logo.jpg" alt="">
+  <p class="logo">Don Eugenio!</p>
     <nav>
       <a href="../../index.html">Pagina principal</a>
       <a href="../../index.html#footer">Contacto</a>
       <a href="../../customer/account/login.html">Ingresar</a>
     </nav>
   </div>
-  `
-} else if (url.endsWith('/shoppingCart.html')) { // Si estamos en shopping_cart.html (url === '/shopping_cart.html')
+  `;
+} else if (page === 'shoppingCart') {
   cad = `
   <div class="container">
-  <img src="../images/logo.jpg" alt="">
+  <p class="logo">Don Eugenio!</p>
   <nav>
       <a href="../index.html">Pagina principal</a>
       <a href="../index.html#nuestros-productos">Nuestros Productos</a>
@@ -79,12 +153,13 @@ if (url.endsWith('/index.html')) { // Si estamos en index.html (url === '/index.
       <a href="../customer/account/create.html">Registrarse</a>
   </nav>
   </div>
-  `
+  `;
 }
 
-document.querySelector("header").innerHTML=cad
+document.querySelector("header").innerHTML=cad;
 
 // footer
+
 
 cad=`
 <footer class="top">
